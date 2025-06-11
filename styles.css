@@ -7,7 +7,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: url(images/blue_cover.jpg);
+    background-image: url(images/mixed.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -38,40 +38,26 @@ nav{
     font-size: 25px;
 }
 
-.typing-wrapper {
+.typing-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 1rem; /* Adjust as needed */
+    margin-top: 0.5rem;
     width: 100%;
-}
-
-.typing-container {
-    display: inline-block;
-}
-
-/* Typing Animation */
-.typing-text {
+    font-size: 1.5rem;
     color: #000000;
-    font-size: 2rem;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid #fff;
-    display: inline-block; /* Required for width animation on inline elements */
-    width: 0; /* Start with 0 width */
-    animation: 
-        typing 2s steps(23, end) forwards,
-        blink-caret 0.75s step-end infinite;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 18.7ch; }
+#typing-text {
+    white-space: pre;
 }
 
-@keyframes blink-caret {
-    from, to { border-right-color: transparent }
-    50% { border-right-color: #000000; }
+.cursor {
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
 }
 
 .photo-container {
@@ -83,7 +69,7 @@ nav{
 .profile-photo {
     width: 200px; /* Adjust size as needed */
     height: 200px;
-    border-radius: 50%; /* Makes it circular, remove if not desired */
+    /* border-radius: 50%; Makes it circular, remove if not desired */
     object-fit: cover;
     display: block;
     margin: 0 auto;
