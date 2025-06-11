@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/blue_cover.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 1%;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px 10px
+}
+
+.nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.typing-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem; /* Adjust as needed */
+    width: 100%;
+}
+
+.typing-container {
+    display: inline-block;
+}
+
+/* Typing Animation */
+.typing-text {
+    color: #000000;
+    font-size: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    display: inline-block; /* Required for width animation on inline elements */
+    width: 0; /* Start with 0 width */
+    animation: 
+        typing 2s steps(23, end) forwards,
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 18.7ch; }
+}
+
+@keyframes blink-caret {
+    from, to { border-right-color: transparent }
+    50% { border-right-color: #000000; }
+}
+
+.photo-container {
+    margin-top: 6rem; /* Adjust as needed */
+    text-align: center;
+    width: 100%;
+}
+
+.profile-photo {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%; /* Makes it circular, remove if not desired */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}

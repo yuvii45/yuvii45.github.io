@@ -1,0 +1,5 @@
+Make a timeline of experience 
+Light and Dark mode toggle
+Typing animation on cover screen
+Page of skills / frameworks I know
+Section by section scrolling?
