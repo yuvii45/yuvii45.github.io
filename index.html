@@ -1,40 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Yuvraj Parekh</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
     <section class="header">
-        
-        <nav>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Experience</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">About Me</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="photo-container">
-            <img src="images/my_photo.jpeg" alt="Yuvraj Parekh" class="profile-photo">
+      <nav>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+          </ul>
         </div>
+      </nav>
+    </section>
 
-    <div class="typing-container">
+    <!-- Home Section -->
+    <section id="home" class="page-section">
+      <div class="photo-container">
+        <img
+          src="images/my_photo.jpeg"
+          alt="Yuvraj Parekh"
+          class="profile-photo"
+        />
+      </div>
+      <div class="typing-container">
         <span id="typing-text"></span>
         <span class="cursor">|</span>
-    </div>
-
+      </div>
     </section>
-    <script src="typing_animation.js"></script>
-</body>
+
+    <section id="experience" class="page-section">
+      <center><h2>Experience</h2></center>
+      <ul class="timeline">
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <!-- <img src="images/iitb.png" alt="IIT Bombay Logo" style="width:40px; height:40px; object-fit:contain; border-radius:50%; margin-bottom:10px;"> -->
+            <p class="timeline-event-thumbnail">August 2023 – Present</p>
+            <h3>B.S in Engineering Sciences</h3>
+            <h4>Indian Institute of Technology Bombay</h4>
+          </div>
+        </li>
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <!-- <img src="images/sedrica.jpeg" alt="SeDriCa Logo" style="width:40px; height:40px; object-fit:contain; border-radius:50%; margin-bottom:10px;"> -->
+            <p class="timeline-event-thumbnail">Nov 2023 – Feb 2025</p>
+            <h3>Perception Engineer</h3>
+            <h4>Self Driving Cars (SeDriCa), UMIC, IITB</h4>
+          </div>
+        </li>
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <!-- <img src="images/fira.jpeg" alt="FIRA Logo" style="width:40px; height:40px; object-fit:contain; border-radius:50%; margin-bottom:10px;"> -->
+            <p class="timeline-event-thumbnail">Aug 2024</p>
+            <h3>Software Engineer</h3>
+            <h4>
+              FIRA Roboworldcup 2024, Sao Luis, Brazil, Finalist in Autonomous
+              Racing and Urban Categories
+            </h4>
+          </div>
+        </li>
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <!-- <img src="images/F1TENTHLogo.png" alt="F1TENTH Logo" style="width:40px; height:40px; object-fit:contain; border-radius:50%; margin-bottom:10px;"> -->
+            <p class="timeline-event-thumbnail">Dec 2024</p>
+            <h3>Software Engineer</h3>
+            <h4>
+              F1TENTH CDC Milano 2024, Italy, Semi-finalist in Autonomous Racing
+              Category
+            </h4>
+          </div>
+        </li>
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <!-- <img src="images/terrastack.jpeg" alt="Terrastack Logo" style="width:40px; height:40px; object-fit:contain; border-radius:50%; margin-bottom:10px;"> -->
+            <p class="timeline-event-thumbnail">May 2025 - Present</p>
+            <h3>Algorithms and Data Systems Intern</h3>
+            <h4>Terrastack Technologies Private Ltd.</h4>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="aboutme" class="page-section">
+      <center><h2>About Me</h2></center>
+    </section>
+    <script src="js/typing_animation.js"></script>
+  </body>
 </html>

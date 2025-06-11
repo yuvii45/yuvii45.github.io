@@ -4,13 +4,23 @@
     font-family: 'Inter', sans-serif;
 }
 
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: url(images/mixed.jpg);
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    background-image: url('images/blue_cover.jpg');
     background-position: center;
     background-size: cover;
-    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: keeps background fixed while scrolling */
 }
 
 nav{
@@ -69,8 +79,106 @@ nav{
 .profile-photo {
     width: 200px; /* Adjust size as needed */
     height: 200px;
-    /* border-radius: 50%; Makes it circular, remove if not desired */
     object-fit: cover;
     display: block;
     margin: 0 auto;
+}
+
+#home {
+    margin-bottom: 250px; /* Adjust the value as needed */
+}
+
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+/* Layout */
+* {
+  box-sizing: border-box;
+}
+
+/* Styling */
+.timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+  list-style: none;
+}
+
+.timeline::before {
+  background-color: black;
+  content: '';
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.timeline-event:hover .timeline-event-icon {
+  transform: rotate(-45deg);
+  background-color: rgb(168, 50, 121);
+}
+
+.timeline-event:hover .timeline-event-thumbnail {
+  box-shadow: inset 40em 0 0 0 rgb(168, 50, 121);
+}
+
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 80%;
+}
+
+.timeline-event-copy h3 {
+  font-size: 1.0em;
+}
+
+.timeline-event-copy h4 {
+  font-size: 0.6em;
+}
+
+.timeline-event-copy strong {
+  font-weight: 700;
+}
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+.timeline-event-icon {
+  transition: transform 0.2s ease-in;
+  transform: rotate(45deg);
+  background-color: black;
+  outline: 5px solid white;
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 2.25em;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.timeline-event-thumbnail {
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: white;
+  font-size: 0.75em;
+  background-color: black;
+  box-shadow: inset 0 0 0 0em #ef795a;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
 }
